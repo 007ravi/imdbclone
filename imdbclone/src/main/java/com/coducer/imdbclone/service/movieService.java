@@ -1,14 +1,16 @@
 package com.coducer.imdbclone.service;
 
-import com.coducer.imdbclone.model.movie;
-import org.springframework.stereotype.Service;
+import com.coducer.imdbclone.model.Movie;
 
 import java.util.List;
+import java.util.Optional;
 
 
 public interface movieService {
 
-    public movie addmovie(movie movie);
+    public Movie addmovie(Movie movie);
 
-   public List<movie> getmovie(String name);
+   public List<Movie> getmovie(String name);
+
+    Optional<Movie> getmoviebyId(int movieId);
 }

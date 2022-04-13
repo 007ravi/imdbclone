@@ -1,13 +1,13 @@
 package com.coducer.imdbclone.repo;
 
-import com.coducer.imdbclone.model.movie;
+import com.coducer.imdbclone.model.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface movieRepo extends JpaRepository<movie,Integer> {
+public interface movieRepo extends JpaRepository<Movie,Integer> {
 
-    @Query(value = "SELECT * FROM movie WHERE m_name like ?1", nativeQuery = true)
-   List<movie> findbyMovieName(String name);
+    @Query(value = "SELECT * FROM movie WHERE name like ?1", nativeQuery = true)
+   List<Movie> findbyMovieName(String name);
 }
