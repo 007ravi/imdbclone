@@ -17,7 +17,7 @@ public class Review {
     private int Rating;
 
     @ManyToOne(fetch = FetchType.LAZY)
-   // @JsonIgnore
+    @JsonIgnore
     //@JoinColumn(name = "movie_id",referencedColumnName = "mid")
     @NotNull
     //@ManyToOne
